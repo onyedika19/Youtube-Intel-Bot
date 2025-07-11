@@ -1,5 +1,6 @@
 const { GoogleGenerativeAI } = require("@google/generative-ai");
-const APIKEY = "AIzaSyB2lf6KuvtEROmeVLGhkUVBv4c46YZkyPU";
+const APIKEY = process.env.API_KEY;
+
 const genAI = new GoogleGenerativeAI(APIKEY);
 
 async function generateReply(chatHistory) {
